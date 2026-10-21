@@ -7,27 +7,23 @@
 
     <title>WikiDesign - Design Thinking</title>
 
- <link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/estilos.css">
+    <!-- Hoja de estilos compartida de WikiDesign -->
+    <link rel="stylesheet" href="css/estilos.css">
 </head>
 
-<body>
+<body class="pagina-design-thinking">
 
     <!-- HEADER -->
     <header class="main-header" id="inicio">
 
         <div class="logo">
-            <a
-                href="#inicio"
-                onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;"
-                style="text-decoration: none; color: inherit; cursor: pointer;"
-            >
+            <a href="#inicio"
+               onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">
                 WikiDesign
             </a>
         </div>
 
-        <!-- MENU SUPERIOR -->
-        <nav class="main-nav">
+        <nav class="main-nav" aria-label="Navegación principal">
             <a href="https://uvmwiki.dreamhosters.com/index.html">
                 INICIO
             </a>
@@ -41,22 +37,22 @@
             </a>
         </nav>
 
-        <!-- BUSCADOR -->
-        <div class="search-box">
+        <form class="search-box" id="form-busqueda">
             <input
-                type="text"
+                type="search"
                 id="buscador"
                 placeholder="Buscar..."
-                onkeydown="if(event.key === 'Enter'){ ejecutarBusqueda(); }"
+                aria-label="Buscar contenido en Design Thinking"
             >
-        </div>
+        </form>
 
     </header>
 
 
     <!-- BREADCRUMBS -->
     <div class="breadcrumbs">
-        Inicio &gt; Temas &gt; Design Thinking
+        <a href="https://uvmwiki.dreamhosters.com/index.html">Inicio</a>
+        &gt; Temas &gt; Design Thinking
     </div>
 
 
@@ -64,53 +60,61 @@
     <div class="wrapper">
 
         <!-- SIDEBAR -->
-        <aside class="sidebar">
+        <aside class="sidebar" aria-label="Menú lateral">
 
-            <!-- El nuevo menú de temas se insertará aquí
-                 automáticamente mediante menu-temas.js -->
+            <!-- Menú general de temas -->
+            <!-- Se insertará aquí si menu-temas.js está disponible -->
+            <div id="menu-temas"></div>
 
-            <!-- RECURSOS -->
-            <h3>RECURSOS</h3>
+            <!-- Recursos de esta página -->
+            <section class="recursos-pagina">
+                <h3>RECURSOS</h3>
 
-            <ul>
-                <li>
-                    <a href="#video-idear">Videos</a>
-                </li>
+                <ul>
+                    <li>
+                        <a href="#video-idear">Videos</a>
+                    </li>
 
-                <li>
-                    <a href="#mapa-empatia">Lecturas</a>
-                </li>
+                    <li>
+                        <a href="#mapa-empatia">Lecturas</a>
+                    </li>
 
-                <li>
-                    <a href="#descargas">Material descargable</a>
-                </li>
-            </ul>
+                    <li>
+                        <a href="#descargas">Material descargable</a>
+                    </li>
+                </ul>
+            </section>
 
         </aside>
 
 
         <!-- CONTENIDO PRINCIPAL -->
-        <main class="content">
+        <main class="content" id="contenido-principal">
 
-            <!-- TITULO -->
+            <!-- TÍTULO -->
             <h1 class="display-title">
                 Design Thinking
             </h1>
 
 
-            <!-- INTRODUCCION -->
-            <section class="intro-section">
+            <!-- INTRODUCCIÓN -->
+            <section class="intro-section" id="introduccion">
 
                 <h2 class="detonating-question">
                     ¿Cómo podríamos crear soluciones que realmente respondan a las necesidades de las personas?
                 </h2>
 
                 <p class="body-text">
-                    El <strong>Design Thinking</strong> es una metodología de innovación centrada en las personas que combina creatividad y pensamiento estratégico para resolver problemas complejos. A través de la observación y la empatía, nos ayuda a desarrollar soluciones viables, deseables y factibles.
+                    El <strong>Design Thinking</strong> es una metodología
+                    de innovación centrada en las personas que combina
+                    creatividad y pensamiento estratégico para resolver
+                    problemas complejos. A través de la observación y la
+                    empatía, nos ayuda a desarrollar soluciones viables,
+                    deseables y factibles.
                 </p>
 
                 <a href="#fases" class="btn-explorar">
-                    Explorar Tema
+                    Explorar tema
                 </a>
 
             </section>
@@ -124,59 +128,58 @@
                 </h2>
 
 
-                <!-- FASE 1 -->
+                <!-- FASE 1: EMPATIZAR -->
                 <article class="process-card" id="empatizar">
 
                     <div class="process-text">
-
                         <h3>1. Empatizar</h3>
 
                         <p>
-                            En esta fase es importante comprender al usuario, sobre todo sus necesidades y su entorno.
+                            En esta fase es importante comprender al usuario,
+                            sobre todo sus necesidades y su entorno.
                         </p>
-
                     </div>
 
                     <img
                         src="img/Recurso 2.1Foto Optimizada magnific foto.png"
-                        alt="Fotografía que representa un momento de empatía"
+                        alt="Personas colaborando para comprender las necesidades de un usuario"
+                        loading="lazy"
                     >
 
                 </article>
 
 
-                <!-- FASE 2 -->
-                <article class="process-card">
+                <!-- FASE 2: DEFINIR -->
+                <article class="process-card" id="definir">
 
                     <div class="process-text">
-
                         <h3>2. Definir</h3>
 
                         <p>
-                            Aquí se analiza la información recabada para identificar el problema principal.
+                            Aquí se analiza la información recabada para
+                            identificar el problema principal.
                         </p>
-
                     </div>
 
                     <img
                         src="img/Recurso 1 - 5-esenciales-del-design-thinking.webp"
                         alt="Diagrama de las fases del Design Thinking"
+                        loading="lazy"
                     >
 
                 </article>
 
 
-                <!-- FASE 3 -->
-                <article class="process-card">
+                <!-- FASE 3: IDEAR -->
+                <article class="process-card" id="idear">
 
                     <div class="process-text">
-
                         <h3>3. Idear</h3>
 
                         <p>
-                            En esta fase se generan ideas creativas e innovadoras.
+                            En esta fase se generan ideas creativas e
+                            innovadoras para encontrar posibles soluciones.
                         </p>
-
                     </div>
 
                     <div class="video-container" id="video-idear">
@@ -185,54 +188,64 @@
                             href="https://www.youtube.com/watch?v=O2_1Ade5SFo"
                             target="_blank"
                             rel="noopener noreferrer"
+                            aria-label="Ver video sobre Design Thinking en YouTube"
                         >
                             <img
                                 src="video/video-design-thinking.png"
-                                alt="Haz clic para ver el video de Design Thinking en YouTube"
+                                alt="Portada del video sobre Design Thinking"
+                                loading="lazy"
                             >
                         </a>
+
+                        <p class="texto-video">
+                            Haz clic en la imagen para ver el video.
+                        </p>
 
                     </div>
 
                 </article>
 
 
-                <!-- FASE 4 -->
-                <article class="process-card">
+                <!-- FASE 4: PROTOTIPAR -->
+                <article class="process-card" id="prototipar">
 
                     <div class="process-text">
-
                         <h3>4. Prototipar</h3>
 
                         <p>
-                            En este momento, las ideas se transforman en representaciones tangibles; se convierten en dummies para visualizar cómo se vería el producto final.
+                            En este momento, las ideas se transforman en
+                            representaciones tangibles. Se convierten en
+                            prototipos para visualizar cómo se vería
+                            el producto final.
                         </p>
 
                         <p>
-                            Para prototipar primero debemos saber qué prototipar y para quién vamos a hacerlo.
+                            Para prototipar, primero debemos saber qué
+                            prototipar y para quién vamos a hacerlo.
                         </p>
-
                     </div>
 
                     <img
                         src="img/Recurso 5 WEPB - safe-customer-journey-map-mapa-experiencia-cliente-editable-online-gratis.webp"
                         alt="Mapa de experiencia del usuario"
+                        loading="lazy"
                     >
 
                 </article>
 
 
-                <!-- FASE 5 -->
-                <article class="process-card">
+                <!-- FASE 5: EVALUAR -->
+                <article class="process-card" id="evaluar">
 
                     <div class="process-text">
-
                         <h3>5. Evaluar</h3>
 
                         <p>
-                            En la última fase se testean los prototipos con la finalidad de obtener retroalimentación y detectar si es necesario realizar nuevas mejoras o continuar con la idea.
+                            En la última fase se prueban los prototipos
+                            con la finalidad de obtener retroalimentación
+                            y detectar si es necesario realizar mejoras
+                            o continuar con la idea.
                         </p>
-
                     </div>
 
                 </article>
@@ -240,7 +253,7 @@
             </section>
 
 
-            <!-- MAPA DE EMPATIA -->
+            <!-- MAPA DE EMPATÍA -->
             <section class="additional-resource" id="mapa-empatia">
 
                 <h2 class="section-title">
@@ -248,18 +261,21 @@
                 </h2>
 
                 <p>
-                    El mapa de empatía permite visualizar diferentes dimensiones de la experiencia del usuario y comprender mejor sus necesidades, pensamientos y sentimientos.
+                    El mapa de empatía permite visualizar diferentes
+                    dimensiones de la experiencia del usuario y comprender
+                    mejor sus necesidades, pensamientos y sentimientos.
                 </p>
 
                 <img
                     src="img/Recurso 4 WEBP - INFOGRAFIA-DE-MAPA-DE-EMPATIA-Y-EMPATHY-MAP-MODELO-1-1.webp"
                     alt="Infografía del mapa de empatía"
+                    loading="lazy"
                 >
 
             </section>
 
 
-            <!-- RECURSO DESCARGABLE -->
+            <!-- RECURSOS DESCARGABLES -->
             <section class="download-section" id="descargas">
 
                 <h2 class="section-title">
@@ -267,7 +283,9 @@
                 </h2>
 
                 <p>
-                    Consulta este material de apoyo académico sobre Design Thinking y las herramientas desarrolladas por d.school.
+                    Consulta este material de apoyo académico sobre
+                    Design Thinking y las herramientas desarrolladas
+                    por d.school.
                 </p>
 
                 <a
@@ -281,8 +299,8 @@
             </section>
 
 
-            <!-- NAVEGACION ENTRE TEMAS -->
-            <div class="pagination-buttons">
+            <!-- NAVEGACIÓN ENTRE TEMAS -->
+            <nav class="pagination-buttons" aria-label="Navegación entre temas">
 
                 <a href="https://uvmwiki.dreamhosters.com/eqp27/">
                     &lt;&lt; Tema anterior
@@ -292,7 +310,7 @@
                     Tema siguiente &gt;&gt;
                 </a>
 
-            </div>
+            </nav>
 
         </main>
 
@@ -303,11 +321,7 @@
     <footer class="main-footer">
 
         <p>
-            <a
-                href="#inicio"
-                onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;"
-                style="cursor: pointer;"
-            >
+            <a href="#inicio">
                 ↑ Volver al inicio
             </a>
         </p>
@@ -317,88 +331,102 @@
         </p>
 
         <p>
-            El contenido de este sitio ha sido desarrollado con fines educativos y académicos.
+            El contenido de este sitio ha sido desarrollado con fines
+            educativos y académicos.
         </p>
 
     </footer>
 
 
-    <!-- FUNCION DE BUSQUEDA -->
+    <!-- BÚSQUEDA INTERNA -->
     <script>
-        function ejecutarBusqueda() {
+        (function () {
+            const formulario = document.getElementById('form-busqueda');
+            const campo = document.getElementById('buscador');
 
-            var campo = document.getElementById('buscador');
+            if (!formulario || !campo) return;
 
-            if (!campo) return;
+            formulario.addEventListener('submit', function (event) {
+                event.preventDefault();
 
-            var termino = campo.value.toLowerCase().trim();
-            var destinoId = '';
+                const termino = campo.value
+                    .toLocaleLowerCase('es')
+                    .trim();
 
-            if (
-                termino.indexOf('fase') !== -1 ||
-                termino.indexOf('proceso') !== -1
-            ) {
-                destinoId = 'fases';
-
-            } else if (termino.indexOf('empat') !== -1) {
-                destinoId = 'empatizar';
-
-            } else if (
-                termino.indexOf('video') !== -1 ||
-                termino.indexOf('idear') !== -1 ||
-                termino.indexOf('youtube') !== -1
-            ) {
-                destinoId = 'video-idear';
-
-            } else if (
-                termino.indexOf('mapa') !== -1 ||
-                termino.indexOf('lectura') !== -1
-            ) {
-                destinoId = 'mapa-empatia';
-
-            } else if (
-                termino.indexOf('descarga') !== -1 ||
-                termino.indexOf('pdf') !== -1 ||
-                termino.indexOf('bootleg') !== -1 ||
-                termino.indexOf('material') !== -1
-            ) {
-                destinoId = 'descargas';
-
-            } else if (
-                termino.indexOf('inicio') !== -1 ||
-                termino.indexOf('arriba') !== -1
-            ) {
-                destinoId = 'inicio';
-            }
-
-            if (destinoId) {
-
-                var elemento = document.getElementById(destinoId);
-
-                if (elemento) {
-                    elemento.scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                } else {
-                    window.location.hash = '#' + destinoId;
+                if (!termino) {
+                    campo.focus();
+                    return;
                 }
 
-            } else if (termino !== '') {
+                const destinos = [
+                    {
+                        palabras: ['introduccion', 'introducción', 'inicio'],
+                        id: 'introduccion'
+                    },
+                    {
+                        palabras: ['fase', 'fases', 'proceso', 'metodologia', 'metodología'],
+                        id: 'fases'
+                    },
+                    {
+                        palabras: ['empatizar', 'empatia', 'empatía'],
+                        id: 'empatizar'
+                    },
+                    {
+                        palabras: ['definir', 'definicion', 'definición', 'problema'],
+                        id: 'definir'
+                    },
+                    {
+                        palabras: ['idear', 'ideas', 'video', 'youtube'],
+                        id: 'video-idear'
+                    },
+                    {
+                        palabras: ['prototipo', 'prototipar'],
+                        id: 'prototipar'
+                    },
+                    {
+                        palabras: ['evaluar', 'evaluacion', 'evaluación', 'prueba'],
+                        id: 'evaluar'
+                    },
+                    {
+                        palabras: ['mapa', 'lectura', 'empatia', 'empatía'],
+                        id: 'mapa-empatia'
+                    },
+                    {
+                        palabras: ['descarga', 'descargable', 'pdf', 'bootleg', 'material'],
+                        id: 'descargas'
+                    }
+                ];
 
-                alert(
-                    'No se encontraron resultados para "' +
-                    termino +
-                    '". Prueba con: video, fases, mapa o descargas.'
-                );
+                const resultado = destinos.find(function (destino) {
+                    return destino.palabras.some(function (palabra) {
+                        return termino.includes(palabra);
+                    });
+                });
 
-            }
-        }
+                if (resultado) {
+                    const elemento = document.getElementById(resultado.id);
+
+                    if (elemento) {
+                        elemento.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+
+                        elemento.setAttribute('tabindex', '-1');
+                        elemento.focus({ preventScroll: true });
+                    }
+                } else {
+                    alert(
+                        'No se encontraron resultados. Prueba con: fases, empatizar, idear, prototipar, mapa o descargas.'
+                    );
+                }
+            });
+        })();
     </script>
 
 
-    <!-- NUEVO MENU DE TEMAS -->
+    <!-- MENÚ COMPARTIDO DE TEMAS -->
     <script src="js/menu-temas.js"></script>
 
 </body>
 </html>
-
